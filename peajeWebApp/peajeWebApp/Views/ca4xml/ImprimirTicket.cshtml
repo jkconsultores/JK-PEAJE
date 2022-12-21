@@ -1,0 +1,150 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px;
+            padding: 0px;
+            width: 320px;
+        }
+
+        .lineaSeparador {
+            width: 100%;
+            margin: 6px auto;
+            border: 1px solid black;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .txtRigth {
+            text-align: right;
+        }
+
+        .txtLeft {
+            text-align: left;
+        }
+
+        .Texto {
+            margin: 1px 0px;
+            font-size: 10px;
+            font-family: 'Arial Arabic Bold',Tahoma;
+            padding: 0px;
+        }
+
+        .centrarTexto {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .tablaDatos {
+            width: 100%;
+            margin-top: 7px;
+        }
+
+        .detalleTicket {
+            width: 100%;
+            margin: 2px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="centrarTexto">
+        <p class="Texto bold">CONCESIONARIA VIAL DEL SOL S.A</p>
+        <p class="Texto bold">Estación de Peaje Sullana</p2px>
+        <p class="Texto">Km 1018+710 Panamericana Norte,Sullana</p0px>
+        <p class="Texto">CAL. HUAURA 198 &nbsp; CHICLAYO &nbsp; CHICLAYO &nbsp; LAMBAYEQUE</p>
+        <p class="Texto"> 05/05/2022 &nbsp; 07:56:54 &nbsp; R.U.C.:20522547957</p>
+        <p class="Texto bold" style="margin-top: 5px;">*** BOLETA DE VENTA ELECTRÓNICA ***</p>
+        <p class="Texto bold">B511 N&deg; 00794609</p>
+    </div>
+    <!-- EN CASO DE FACTURA ELECTRONICA -->
+    <table class="tablaDatos">
+        <thead>
+        <th style="width: 80px"></th>
+        <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Texto ">R.U.C.</td>
+                <td class="Texto txtLeft">:&nbsp;20507850091</td>
+            </tr>
+            <tr>
+                <td class="Texto ">Raz&oacute;n Social</td>
+                <td class="Texto txtLeft">:&nbsp;GESTION DE SERVICIOS AMBIENTALES S.A.C.</td>
+            </tr>
+            <tr>
+                <td class="Texto ">Forma de pago</td>
+                <td class="Texto txtLeft">:&nbsp;Contado</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="lineaSeparador"></div>
+    <div class="detalleTicket">
+        <p class="Texto">PESADO 3 EJES </p>
+        <p class="Texto">8.22</p>
+    </div>
+
+    <div class="lineaSeparador"></div>
+
+    <div class="detalleTicket">
+        <p class="Texto bold" style="width: 210px;">SUB-TOTAL</p>
+        <p class="Texto">S/.</p>
+        <p class="Texto txtRigth" style="width: 90px;">8.58</p>
+    </div>
+    <div class="detalleTicket">
+        <p class="Texto bold" style="width: 210px;">IGV: 18%</p>
+        <p class="Texto">S/.</p>
+        <p class="Texto txtRigth" style="width: 90px;">8.22</p>
+    </div>
+    <div class="detalleTicket" style="margin-top: 10px;">
+        <p class="Texto bold" style="width: 210px;">TOTAL</p>
+        <p class="Texto">S/.</p>
+        <p class="Texto txtRigth" style="width: 90px;">8.22</p>
+    </div>
+    <table class="tablaDatos">
+        <thead>
+        <th style="width: 50px"></th>
+        <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Texto ">CAJERO/A</td>
+                <td class="Texto">:&nbsp;YANAYACO BECERRA, Segundo Raul</td>
+            </tr>
+            <tr>
+                <td class="Texto ">PLACA</td>
+                <td class="Texto ">:&nbsp;P3D537</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="centrarTexto" style="margin-top: 20px;">
+        <p class="Texto">Tlfs. Estaciones de Peaje</p>
+        <p class="Texto" style="width: 200px; margin: auto;">Chicama 989596481/Pacanguilla 989595182/Morrope 989595183/Bayovar 985719374/Sullana 989595185</p>
+        <br>
+        <p class="Texto">* CENTRAL DE EMERGENCIAS *</p>
+        <p class="Texto"> RPM: #985728000 / RPC: 950259000</p>
+        <br>
+        <IMG src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAIAAADZ8fBYAAAAKElEQVRIiWMUkdVmoAFgooWho+aOmjtq7qi5o+aOmjtq7qi5o+aSDQC/nQCWYDPYGgAAAABJRU5ErkJggg==" style="height: 200px;" id="p1img1" align="center">
+    </div>
+    <div style="width: 100%;">
+        <p class="Texto">Representación impresa de BOLETA DE VENTA ELECTRÓNICA, consulte en www.sunat.gob.pe</p>
+        <p class="Texto" style="margin:4px 0px;">Autorizado mediante Resolución N° 034-005-0004782/SUNAT</p>
+        <p class="Texto">Obtenga copia de su documento en www.acepta.pe</p>
+    </div>
+</body>
+</html>

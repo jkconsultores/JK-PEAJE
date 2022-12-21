@@ -1,0 +1,106 @@
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        margin: 3px;
+        padding: 0px;
+        width: 320px;
+    }
+    .bordeBottom{
+        border-bottom: 2px solid gray;
+    }
+    .bordeTop{
+        border-top: 2px solid gray;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .txtRigth {
+        text-align: right;
+    }
+    .txtLeft{
+        text-align: left;
+    }
+    .Texto{
+        margin:1px 0px;
+        font-size: 10px;
+        font-family: 'Arial Arabic Bold',Tahoma;
+        padding: 0px;
+    }
+    .centrarTexto{
+        width: 320px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .tablaDatos{
+        width: 320px;
+        margin-top: 7px;
+    }
+</style>
+<div class='centrarTexto'>
+    <p class='Texto bold'>[RAZONSOCIALEMISOR]</p>
+    <p class='Texto bold'>[TEXTOAUXILIAR250_7]</p>
+    <p class='Texto'>[TEXTOAUXILIAR250_3]</p>
+    <p class='Texto'>[DIRECCIONEMISOR] &nbsp; [PROVINCIAEMISOR] &nbsp; [DISTRITOEMISOR] &nbsp; [DEPARTAMENTOEMISOR]</p>
+    <p class='Texto'>[FECHAEMISION] &nbsp; [HORAEMISOR] &nbsp; R.U.C.:[NUMERODOCUMENTOEMISOR]</p>
+    <p class='Texto bold' style='margin-top: 5px;'>*** [TIPODOCUMENTO] ***</p>
+    <p class='Texto bold'>[SERIENUMERO1] N&deg; [SERIENUMERO2]</p>
+</div>
+[PARTE_FACTURA]
+<table class='tablaDatos bordeBottom bordeTop' style='margin-top:1px; margin-bottom:10px;'>
+    <thead>
+        <th style='width: 160px'></th>
+        <th style='width: 160px'></th>
+    </thead>
+    <tbody>
+        [PARTE_DETALLE]
+    </tbody>
+</table>
+<table class='tablaDatos' style='margin-top:1px; margin-bottom:10px;'>
+    <thead>
+        <th style='width: 50%'></th>
+        <th style='width: 25%'></th>
+        <th style='width: 25%'></th>
+    </thead>
+    <tbody>
+        [PARTE_DATOSFINALESDETALLE]
+    </tbody>
+</table>
+<table class='tablaDatos'>
+    <thead>
+        <th style='width: 50px'></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td class='Texto '>SON</td>
+            <td class='Texto'>:&nbsp;[TEXTOLEYENDA_1]</td>
+        </tr>
+        <tr>
+            <td class='Texto '>CAJERO/A</td>
+            <td class='Texto'>:&nbsp;[TEXTOAUXILIAR250_2]</td>
+        </tr>
+        <tr>
+            <td class='Texto '>PLACA</td>
+            <td class='Texto '>:&nbsp;[TEXTOAUXILIAR250_1]</td>
+        </tr>
+    </tbody>
+</table>
+<div class='centrarTexto' style='padding-top: 20px;'>
+    <p class='Texto'>Tlfs. Estaciones de Peaje</p>
+    <p class='Texto' style='width: 200px; margin: auto;'>Chicama 989596481/Pacanguilla 989595182/Morrope 989595183/Bayovar 985719374/Sullana 989595185</p>
+</div>
+<div class='centrarTexto'>
+    <p class='Texto'>* CENTRAL DE EMERGENCIAS *</p>
+    <p class='Texto'> RPM: #985728000 / RPC: 950259000</p>
+</div>
+<div style='text-align: center;'>
+    <img src='[URL_QR]' style='height: 200px;' id='p1img1' align='center'/>
+</div>
+<div style='width: 320px;'>
+    <p class='Texto'>Representación impresa de BOLETA DE VENTA ELECTRÓNICA, consulte en www.sunat.gob.pe</p>
+    <p class='Texto' style='margin:4px 0px;'>Autorizado mediante Resolución N° 034-005-0004782/SUNAT</p>
+    <p class='Texto'>Obtenga copia de su documento en www.acepta.pe</p>
+</div>

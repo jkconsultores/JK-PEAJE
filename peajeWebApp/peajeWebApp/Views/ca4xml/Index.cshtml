@@ -1,0 +1,68 @@
+﻿@model peajeWebApp.Models.DatosEntrada
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PEAJE</title>
+</head>
+<body>
+    <style>
+        .contentInputs{
+            display: flex;
+            margin-top: 3px;
+            margin-bottom: 3px
+        }
+        .txt{
+            width: 100px;
+            text-align: right;
+            justify-content: center;
+            height: 20px;
+            font-size: 20px
+        }
+        .inputTxt{
+            border: 1px solid gray;
+            border-radius: 2px;
+            height: 20px
+        }
+
+        .inputArea {
+            border: 1px solid gray;
+            border-radius: 2px;
+        }
+
+        .btnSubmit{
+            border: 1px solid black;
+            border-radius: 2px;
+            height:23px;
+        }
+    </style>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Index">
+                <div class="form-group contentInputs">
+                    <label asp-for="Docid" class="control-label txt" >Doc ID:&nbsp;</label>
+                    <input asp-for="Docid" class="form-control inputTxt" placeholder="F112-00945452"/>
+                </div>
+                <div class="form-group contentInputs">
+                    <label asp-for="Comando" class="control-label txt">Comando:&nbsp;</label>
+                    <input asp-for="Comando" class="form-control inputTxt" placeholder="emitir_tkt" />
+                </div>
+                <div class="form-group contentInputs">
+                    <label asp-for="Parametro" class="control-label txt">Parametros:&nbsp;</label>
+                    <input asp-for="Parametro" class="form-control inputTxt" />
+                </div>
+                <div class="form-group contentInputs">
+                    <label asp-for="Datos" class="control-label txt">Datos:&nbsp;</label>
+                    <textarea asp-for="Datos" class="form-control inputArea" rows="18" cols="100"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar consulta" class="btn btn-primary btnSubmit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

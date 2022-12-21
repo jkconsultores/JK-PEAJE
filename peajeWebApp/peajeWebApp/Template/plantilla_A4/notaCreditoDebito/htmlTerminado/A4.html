@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 10px;
+        padding: 0px;
+        width: 965px;
+    }
+    .Texto{
+        margin: 5px 0px;
+        font-size: 10px;
+        font-family: 'Arial Arabic Bold',Tahoma;
+        padding: 0px;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .left{
+        text-align: left;
+        padding-left: 2px;
+    }
+    .right{
+        text-align: right;
+        padding-right: 2px;
+    }
+    .cabeceraDoc{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .tablaDatos{
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    .borderColumn{
+        border-left: 1px solid  gray ;
+        border-right: 1px solid  gray ;
+    }
+    .montosTotales{
+        border-bottom: 1px solid  gray; 
+        height: 10px;
+    }
+</style>
+<body>
+</body>
+    <div class="cabeceraDoc">
+        <div>
+            <img src="data:image/png;base64,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" style="height: 100px;" id="p1img1" align="center">
+        </div>
+        <div>
+            <p class="Texto bold" style="font-size: 15px;">CONCECIONARIA VIAL DEL SOL S.A.</p>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">CAL. HUAURA 198</P>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">URB. SANTA VICTORIA</P>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">Distrito: CHICLAYO</P>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">Provincia: CHICLAYO</P>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">Deprtamento: LAMBAYEQUE</P>
+            <P class="Texto" style="margin: 1px; font-size: 8px;">Pa&iacute;s: PE</P>
+        </div>
+        <div style="border: 1px solid  gray; width: 250px; height: 108px; text-align: center;">
+            <p class="Texto bold" style="font-size: 15px;">R.U.C. N&deg; 20522547957</p>
+            <p class="Texto bold" style="font-size: 15px; margin: 11px auto;">NOTA DE CR&Eacute;DITO ELECTRONICA</p>
+            <p class="Texto bold" style="font-size: 15px;">F030 N&deg; 00000386</p>
+        </div>
+    </div>
+    <div class="cabeceraDoc">
+        <div style="width: 450px;">
+            <table class="tablaDatos">
+                <thead>
+                    <th style="width: 100px"></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="Texto ">SE&Ntilde;OR(ES)</td>
+                        <td class="Texto">:&nbsp;GLD TRANSPORT S.A.C</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto ">R.U.C.</td>
+                        <td class="Texto">:&nbsp;20600975383</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto ">DIRECCI&Oacute;N</td>
+                        <td class="Texto ">:&nbsp;CAR.EVITAMIENTO NRO. 552 SEC. LA ENCALADA - 1ER PISO TRUJILLO TRUJILLO LA LIBERTAD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="width: 250px;">
+            <table class="tablaDatos">
+                <tbody>
+                    <tr>
+                        <td class="Texto">CHICLAYO, 31 DE MARZO DE 2022</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto">REFERENCIA</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto ">TIPO DOC.</td>
+                        <td class="Texto">:&nbsp;FACTURA</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto ">FECHA</td>
+                        <td class="Texto ">:&nbsp;13/02/2022</td>
+                    </tr>
+                    <tr>
+                        <td class="Texto ">N&deg;</td>
+                        <td class="Texto ">:&nbsp;F030-00094483</td>
+                    </tr>
+                </tbody>
+            </table></div>
+    </div>
+
+    <table style="border-collapse: collapse; border-top: 1px solid  gray; border-right: 1px solid  gray;">
+        <thead>
+            <tr style="border: 1px solid  gray; height: 25px;">
+                <th class="Texto"style="border: 1px solid  gray; width: 120px;">CODIGO</th>
+                <th class="Texto"style="border: 1px solid  gray; width: 450px;">DESCRIPCION</th>
+                <th class="Texto"style="border: 1px solid  gray; width: 120px;">CANTIDAD</th>
+                <th class="Texto"style="border: 1px solid  gray; width: 130px;">P. UNITARIO</th>
+                <th class="Texto"style="border: 1px solid  gray; width: 130px;">TOTAL</th>
+            </tr>
+        </thead>        
+        <tbody>
+            <tr>
+                <td class="borderColumn Texto" style="text-align: center;">CAT 6</td>
+                <td class="borderColumn Texto left">PESADO 6 EJES - PEAJE SULLANA</td>
+                <td class="borderColumn Texto right">1.00</td>
+                <td class="borderColumn Texto right">49.15</td>
+                <td class="borderColumn Texto right">49.15</td>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+            <tr class="" style="height: 25px;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse;">
+        <thead>
+            <tr style="border-top: 1px solid gray;">
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 450px;"></th>
+                <th class="Texto borderColumn"style="width: 120px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+                <th class="Texto borderColumn"style="width: 130px;"></th>
+            </tr>
+        </thead>        
+        <tbody>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                    <p class="Texto" style="font-size: 12px; padding-left: 2px;margin: 0px;">SON: CINCUENTA Y OCHO Y 0/100 SOLES</p>
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">OP.GRAVADAS</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">49.15</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">OP.INAFECTAS</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">0.00</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">OP.INAFECTAS</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">0.00</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">OP.EXONERADAS</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">0.00</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">OP.GRATUITAS</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">0.00</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">TOTAL DESCUENTO</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">0.00</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">I.G.V. 18.00%</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">8.85</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                 </td>
+                <td class="borderColumn montosTotales">
+                    <p class="Texto bold right" style="margin: 0px;">total</p>
+                </td>
+                <td class="borderColumn montosTotales">
+                    <div style="display: flex; justify-content: space-between">
+                        <p class="Texto bold" style="padding-left: 10px; margin: 0px;">S/.</p>
+                        <p class="Texto bold" style="padding-right: 1px; margin: 0px;">58.00</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="centrarTexto" style="margin-top: 40px; margin-left: 150px;">
+        <IMG src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAIAAADZ8fBYAAAAKElEQVRIiWMUkdVmoAFgooWho+aOmjtq7qi5o+aOmjtq7qi5o+aSDQC/nQCWYDPYGgAAAABJRU5ErkJggg==" style="height: 200px;" id="p1img1" align="center">
+    </div>
+    <div style="width: 100%;">
+        <p class="Texto">Representación impresa de BOLETA DE VENTA ELECTRÓNICA, consulte en www.sunat.gob.pe</p>
+        <p class="Texto" style="margin:4px 0px;">Autorizado mediante Resolución N° 034-005-0004782/SUNAT</p>
+        <p class="Texto">Obtenga copia de su documento en www.acepta.pe</p>
+    </div>
+</html>
