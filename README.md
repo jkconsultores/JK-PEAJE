@@ -1,7 +1,8 @@
 # Peaje_JK
-~NUGET USADOS~
+*NUGET USADOS*
 - Microsoft.Extensions.Hosting.WindowsServices
-- Npgsql
-- QrCode.Net
-- Select.HtmlToPdf.NetCore
+- QRCoder
+- iTextSharp
+- itextsharp.xmlworker
 - System.Data.SqlClient
+- Npgsql
